@@ -1,18 +1,19 @@
+import sys
+from os import path
 from os import system
 
-import sys
 from setuptools import setup
 
-here = sys.path.abspath(sys.path.dirname(__file__))
+here = path.abspath(path.dirname(__file__))
 
 install_deps = [
-        'dealer',
-        'django'
-    ]
+    'dealer',
+    'django'
+]
 
 tests_deps = [
-        'mock'
-    ]
+    'mock'
+]
 
 extras = {
     'tests': tests_deps,
@@ -20,9 +21,8 @@ extras = {
 
 version = '0.0.1'
 
-
 # Get the long description from the README file
-with open(sys.path.join(here, 'README.rst')) as f:
+with open(path.join(here, 'README.rst')) as f:
     long_description = f.read()
 
 if sys.argv[-1] == 'publish':
