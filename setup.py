@@ -36,7 +36,7 @@ if sys.argv[-1] == 'publish':
 setup(
     name='django-github-revision',
     version=version,
-    packages=['github_revision', ],
+    packages=['github_revision', 'github_revision.templatetags'],
     url='https://github.com/watchdogpolska/django-github-revision',
     license='MIT',
     author='Adam Dobrawy',
