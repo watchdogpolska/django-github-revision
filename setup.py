@@ -19,7 +19,7 @@ extras = {
     'tests': tests_deps,
 }
 
-version = '0.0.2'
+version = '0.0.3'
 
 # Get the long description from the README file
 with open(path.join(here, 'README.rst')) as f:
