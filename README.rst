@@ -49,7 +49,7 @@ If you use Sentry you propably want use following settings:
     RELEASE_ID = auto.revision
     RAVEN_CONFIG = {
         'dsn': env.str('RAVEN_DSN', 'http://example.com'),
-        'release': RELEASE_ID,
+        'release': RELEASE_ID
     }
 
 Running the tests
