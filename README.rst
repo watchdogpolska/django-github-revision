@@ -35,14 +35,14 @@ Finally use template tags:
     {% load github_revision_tags %}
     {% github_link %}
 
-Alternativelly use context processors available at ```github_revision.context_processors.github_revision```.
+Alternatively use context processors available at ```github_revision.context_processors.github_revision```.
 
 Running the tests
 -----------------
 
-To run tests execute:
+To run tests execute::
 
-```tox```
+    tox
 
 Versioning
 ----------
