@@ -1,9 +1,9 @@
-from dealer.auto import auto
+from dealer.auto import auto as dealer_auto
 from django.conf import settings
 
 
 def dealer():
-    return auto.revision
+    return dealer_auto.revision
 
 
 def auto():
