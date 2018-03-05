@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.6"
+
+matrix:
+  include:
+    - env: TOXENV=py36
+    - env: TOXENV=py27
+
+
+install:
+  - pip install tox
+
+script:
+  - tox -e $TOX_ENV
