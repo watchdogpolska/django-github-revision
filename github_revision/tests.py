@@ -1,4 +1,4 @@
-from django.template import engines
+from django.template import engines, Template, Context
 from django.test import TestCase
 import mock
 
@@ -16,13 +16,10 @@ class ContextProcessorTestCase(TestCase):
 
 
 class TemplateTagsTestCase(TestCase):
-    def setUp(self):
-        self.engine = engines['django']
-
     @mock.patch("github_revision.backends.dealer", lambda x=None: 'REV_TEST')
     def test_render_html(self):
-        template = self.engine.from_string("{% load github_revision_tags %}{% github_link %}")
-        content = template.render()
+        template = Template("{% load github_revision_tags %}{% github_link %}")
+        content = template.render(Context())
         self.assertEqual(content,
                          '<a href="https://github.com/watchdogpolska/django-github-revision/compare/'
                          'REV_TEST...master">REV_TES</a>')
