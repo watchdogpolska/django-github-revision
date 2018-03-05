@@ -37,6 +37,21 @@ Finally use template tags:
 
 Alternatively use context processors available at ```github_revision.context_processors.github_revision```.
 
+Raven integration
+~~~~~~~~~~~~~~~~~
+
+If you use Sentry you propably want use following settings:
+
+.. code:: python
+
+    from dealer.auto import auto
+
+    RELEASE_ID = auto.revision
+    RAVEN_CONFIG = {
+        'dsn': env.str('RAVEN_DSN', 'http://example.com'),
+        'release': RELEASE_ID,
+    }
+
 Running the tests
 -----------------
 
